@@ -25,7 +25,7 @@ module Control
 	output RegWrite,
 	output [2:0]ALUOp
 );
-localparam R_Type 		= 0;
+localparam R_Type			= 0;
 localparam I_Type_ADDI	= 6'h8;
 localparam I_Type_ORI 	= 6'h0d;
 localparam I_Type_LUI 	= 6'h0f;
