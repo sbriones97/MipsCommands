@@ -22,6 +22,7 @@ module ALU
 	input [3:0] ALUOperation,
 	input [31:0] A,
 	input [31:0] B,
+	input [4:0] ALUShamt,
 	output reg Zero,
 	output reg [31:0]ALUResult
 );
@@ -49,9 +50,9 @@ localparam ANDI 	=	4'b1001;
 			ADD:
 				ALUResult = A + B;
 			SLL:
-				ALUResult = A <<< shampt;
+				ALUResult = A <<< ALUShamt;
 			SRL:
-				ALUResult = A >>> shampt;
+				ALUResult = A >>> ALUShamt;
 			ADDI:
 				ALUResult = A + B;
 			ORI:
