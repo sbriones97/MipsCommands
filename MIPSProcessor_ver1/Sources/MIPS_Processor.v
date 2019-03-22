@@ -180,7 +180,8 @@ ArithmeticLogicUnit
 	.A(ReadData1_wire),
 	.B(ReadData2OrInmmediate_wire),
 	.Zero(Zero_wire),
-	.ALUResult(ALUResult_wire)
+	.ALUResult(ALUResult_wire),
+	.ALUShamt(Instruction_wire[10:6])
 );
 
 assign ALUResultOut = ALUResult_wire;
